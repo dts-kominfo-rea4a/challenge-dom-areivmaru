@@ -68,8 +68,9 @@
         input.value = "";
       });
 
-      input.addEventListener("keyup", function (event) {
-        if (event.keyCode === 13) {
+      input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
           fnClickHandler(input.value);
           input.value = "";
         }
@@ -79,7 +80,7 @@
       // Fungsi yang digunakan untuk menambahkan tulisan
       // Jangan ubah cara deklarasi fungsinya, cukup isi saja
       function fnClickHandler(toDoItem) {
-        let todoTask = "<li class='todo'>" + toDoItem + "</li>";
+        let todoTask = "<li>" + toDoItem + "</li>";
         output.innerHTML += todoTask;
       }
 
