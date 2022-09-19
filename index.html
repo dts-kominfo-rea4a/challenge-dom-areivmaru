@@ -32,8 +32,10 @@
   </style>
   <body>
     <div id="app">
-      <header id="todo-title">TO DO LIST</header>
-      <h1 id="todo-subtitle">Today i need to</h1>
+      <!-- TODO: Buatlah sebuah header dengan id todo-title -->
+      <h2 id="todo-title">To-Do-List</h2>
+      <!-- TODO: Buatlah sebuah subtitle dengan id todo-subtitle -->
+      <p id="todo-subtitle">~ Today I need To ~</p>
 
       <!-- Section: input -->
       <input type="text" id="todo-input" />
@@ -61,7 +63,6 @@
 
       let output = document.querySelector("#todo-output");
 
-
       button.addEventListener("click", (e) => {
         let toDoItem = input.value;
         toDoItem = toDoItem.trim();
@@ -87,7 +88,6 @@
         let todoTask = "<li class='todo'>" + toDoItem + "</li>";
         output.innerHTML += todoTask;
       }
-
 
       // TODO: register event onclick / addEventListener untuk button
       // akan menjalankan fungsi fnClickHandler
