@@ -64,19 +64,13 @@
       let output = document.querySelector("#todo-output");
 
       button.addEventListener("click", (e) => {
-        let toDoItem = input.value;
-        toDoItem = toDoItem.trim();
-        console.log(toDoItem);
-        fnClickHandler(toDoItem);
+        fnClickHandler(input.value);
         input.value = "";
       });
 
       input.addEventListener("keyup", function (event) {
-        event.preventDefault();
         if (event.keyCode === 13) {
-          let toDoItem = input.value;
-          toDoItem = toDoItem.trim();
-          fnClickHandler(toDoItem);
+          fnClickHandler(input.value);
           input.value = "";
         }
       });
